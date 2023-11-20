@@ -65,7 +65,7 @@ const employees = [
 //مصفوفة الحجوزات
 const reservations = [];
 
-//دالة للتحقق والحجز
+//ميثود للتحقق والحجز
 function checkAndReserve(employeeId, vehicleId) {
   const employee = employees.find((emp) => emp.id === employeeId);
   const vehicle = vehicles.find((veh) => veh.id === vehicleId);
@@ -92,7 +92,7 @@ function checkAndReserve(employeeId, vehicleId) {
 
 }
 
-//استخدام الدالة
+//استخدام الميثود
 checkAndReserve(1, "C001");
 checkAndReserve(2, "P001");
 
