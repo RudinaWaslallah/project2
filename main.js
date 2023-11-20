@@ -76,7 +76,7 @@ function checkAndReserve(employeeId, vehicleId) {
       (employee instanceof Driver && vehicle instanceof Car) ||
       (employee instanceof Pilot && vehicle instanceof Plane)
     ) {
-      console.log("لا يمكن إسناد الموظف للمركبة.");
+      console.log("Cannot assign the employee to the vehicle.");
     } else {
       const reservation = {
         reservationDate: new Date(),
@@ -85,11 +85,12 @@ function checkAndReserve(employeeId, vehicleId) {
         reservationID: reservations.length + 1,
       };
       reservations.push(reservation);
-      console.log("تم إجراء الحجز بنجاح:", reservation);
+      console.log("Reservation successful:", reservation);
     }
   } else {
-    console.log("الموظف أو المركبة غير موجودة.");
+    console.log("Employee or vehicle not found.");
   }
+
 }
 
 // استخدام الدالة
@@ -97,6 +98,6 @@ checkAndReserve(1, "C001");
 checkAndReserve(2, "P001");
 
 // طباعة محتوى المصفوفة باستخدام map
-console.log("محتوى المصفوفة:");
+console.log("Array content:");
 reservations.map((reservation) => console.log(reservation));
 
