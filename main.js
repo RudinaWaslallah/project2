@@ -1,4 +1,4 @@
-// تعريف Class المركبات
+//Class المركبات
 class Vehicle {
   constructor(name, manufacturer, id) {
     this.name = name;
@@ -6,8 +6,7 @@ class Vehicle {
     this.id = id;
   }
 }
-
-// تعريف Class السيارة
+// Class السيارة
 class Car extends Vehicle {
   constructor(name, manufacturer, id, type) {
     super(name, manufacturer, id);
@@ -15,7 +14,7 @@ class Car extends Vehicle {
   }
 }
 
-// تعريف Class الطائرة
+// Class الطائرة
 class Plane extends Vehicle {
   constructor(name, manufacturer, id, type) {
     super(name, manufacturer, id);
@@ -23,7 +22,7 @@ class Plane extends Vehicle {
   }
 }
 
-// تعريف Class الموظفين
+// Class الموظفين
 class Employee {
   constructor(name, id, dateOfBirth) {
     this.name = name;
@@ -32,7 +31,7 @@ class Employee {
   }
 }
 
-// تعريف Class السائق
+// Class السائق
 class Driver extends Employee {
   constructor(name, id, dateOfBirth, licenseID) {
     super(name, id, dateOfBirth);
@@ -40,7 +39,7 @@ class Driver extends Employee {
   }
 }
 
-// تعريف Class الطيّار
+// Class الطيّار
 class Pilot extends Employee {
   constructor(name, id, dateOfBirth, licenseID) {
     super(name, id, dateOfBirth);
@@ -48,7 +47,7 @@ class Pilot extends Employee {
   }
 }
 
-// تعريف مصفوفة المركبات
+// مصفوفة المركبات
 const vehicles = [
   new Car("Car1", "Manufacturer1", "C001", "Gas"),
   new Car("Car2", "Manufacturer2", "C002", "Electric"),
@@ -57,13 +56,13 @@ const vehicles = [
   new Plane("Plane2", "Manufacturer5", "P002", "Private"),
 ];
 
-// تعريف مصفوفة الموظفين
+// مصفوفة الموظفين
 const employees = [
   new Pilot("Pilot1", 1, "01/01/1990", "P001"),
   new Driver("Driver1", 2, "02/02/1995", "D001"),
 ];
 
-// تعريف مصفوفة الحجوزات
+//  مصفوفة الحجوزات
 const reservations = [];
 
 // دالة للتحقق والحجز
