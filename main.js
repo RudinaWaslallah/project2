@@ -6,7 +6,7 @@ class Vehicle {
     this.id = id;
   }
 }
-// Class السيارة
+//Class السيارة
 class Car extends Vehicle {
   constructor(name, manufacturer, id, type) {
     super(name, manufacturer, id);
@@ -14,7 +14,7 @@ class Car extends Vehicle {
   }
 }
 
-// Class الطائرة
+//Class الطائرة
 class Plane extends Vehicle {
   constructor(name, manufacturer, id, type) {
     super(name, manufacturer, id);
@@ -22,7 +22,7 @@ class Plane extends Vehicle {
   }
 }
 
-// Class الموظفين
+//Class الموظفين
 class Employee {
   constructor(name, id, dateOfBirth) {
     this.name = name;
@@ -31,7 +31,7 @@ class Employee {
   }
 }
 
-// Class السائق
+//Class السائق
 class Driver extends Employee {
   constructor(name, id, dateOfBirth, licenseID) {
     super(name, id, dateOfBirth);
@@ -39,7 +39,7 @@ class Driver extends Employee {
   }
 }
 
-// Class الطيّار
+//Class الطيّار
 class Pilot extends Employee {
   constructor(name, id, dateOfBirth, licenseID) {
     super(name, id, dateOfBirth);
@@ -47,7 +47,7 @@ class Pilot extends Employee {
   }
 }
 
-// مصفوفة المركبات
+//مصفوفة المركبات
 const vehicles = [
   new Car("Car1", "Manufacturer1", "C001", "Gas"),
   new Car("Car2", "Manufacturer2", "C002", "Electric"),
@@ -56,16 +56,16 @@ const vehicles = [
   new Plane("Plane2", "Manufacturer5", "P002", "Private"),
 ];
 
-// مصفوفة الموظفين
+//مصفوفة الموظفين
 const employees = [
   new Pilot("Pilot1", 1, "01/01/1990", "P001"),
   new Driver("Driver1", 2, "02/02/1995", "D001"),
 ];
 
-//  مصفوفة الحجوزات
+//مصفوفة الحجوزات
 const reservations = [];
 
-// دالة للتحقق والحجز
+//دالة للتحقق والحجز
 function checkAndReserve(employeeId, vehicleId) {
   const employee = employees.find((emp) => emp.id === employeeId);
   const vehicle = vehicles.find((veh) => veh.id === vehicleId);
@@ -92,11 +92,11 @@ function checkAndReserve(employeeId, vehicleId) {
 
 }
 
-// استخدام الدالة
+//استخدام الدالة
 checkAndReserve(1, "C001");
 checkAndReserve(2, "P001");
 
-// طباعة محتوى المصفوفة باستخدام map
+//طباعة محتوى المصفوفة باستخدام map
 console.log("Array content:");
 reservations.map((reservation) => console.log(reservation));
 
